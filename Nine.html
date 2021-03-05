@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nine Question</title>
+  </head>
+  <body>
+    <script>
+      var array = [1, 2, 2, 3, 4, 5, 4];
+      var myMap = new Map();
+      var mySet = new Set();
+      for (var i = 0; i < array.length; i++) {
+        myMap.set(i, array[i]);
+        mySet.add(array[i]);
+      }
+      console.log(myMap);
+      console.log(mySet);
+      for (var i = 0; i < array.length; i++) {
+        console.log(myMap.get(i));
+      }
+      console.log(mySet.has(5));
+    </script>
+  </body>
+</html>

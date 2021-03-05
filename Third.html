@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Third Question</title>
+  </head>
+  <body>
+    <h1>
+      Write a program to implement inheritance upto 3 classes.The Class must
+      public variables and static functions.
+    </h1>
+    <script>
+      class Vehicle {
+        constructor(name, type) {
+          this.name = name;
+          this.type = type;
+        }
+
+        getName() {
+          return this.name;
+        }
+
+        getType() {
+          return this.type;
+        }
+      }
+
+      class Car extends Vehicle {
+        constructor(name, type) {
+          super(name, "Car");
+        }
+
+        getName() {
+          return "Name of car is: " + super.getName();
+        }
+      }
+
+      class Bike extends Vehicle {
+        constructor(name, type) {
+          super(name, "Bike");
+        }
+        getName() {
+          return "Name of the Bike is: " + super.getName();
+        }
+      }
+
+      class Auto extends Vehicle {
+        constructor(name, type) {
+          super(name, "Auto Rickshaw");
+        }
+        getName() {
+          return "Name of auto rickshaw is: " + super.getName();
+        }
+      }
+      let car = new Car("Tesla Model S");
+      let bike = new Bike("Harley Davidson Road King");
+      let auto = new Auto("3 Tier Auto Rickshaw");
+      console.log(car.getName());
+      console.log(car.getType());
+      console.log(bike.getName());
+      console.log(bike.getType());
+      console.log(auto.getName());
+      console.log(auto.getType());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eight Question</title>
+  </head>
+  <body>
+    <script>
+      class Node {
+        constructor(data, next = null) {
+          this.data = data;
+          this.next = next;
+        }
+      }
+
+      class LinkedList {
+        constructor() {
+          this.head = null;
+          this.size = 0;
+        }
+
+        addFirst(data) {
+          this.head = new Node(data, this.head);
+          this.size++;
+        }
+
+        addLast(data) {
+          let node = new Node(data);
+          let current;
+
+          if (!this.head) {
+            this.head = node;
+          } else {
+            current = this.head;
+            while (current.next) {
+              current = current.next;
+            }
+            current.next = node;
+          }
+          this.size++;
+        }
+
+        length() {
+          return this.size;
+        }
+
+        getFirst() {
+          return this.head.data;
+        }
+
+        getLast() {
+          let current = this.head;
+          let count = 1;
+
+          while (current) {
+            if (count == this.size) {
+              console.log(current.data);
+            }
+            count++;
+            current = current.next;
+          }
+        }
+      }
+
+      const ll = new LinkedList();
+
+      ll.addFirst(100);
+      ll.addFirst(200);
+      ll.addFirst(300);
+      ll.addLast(400);
+      console.log(ll.getFirst());
+      console.log(ll.getLast());
+      console.log(ll);
+      console.log(ll.length());
+    </script>
+  </body>
+</html>

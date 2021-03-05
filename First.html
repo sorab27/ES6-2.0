@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Question</title>
+  </head>
+  <body>
+    <h1>Filter unique array members using Set.</h1>
+    <script>
+      const array = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4];
+      const mySet = new Set();
+      console.log("Original Array is: ");
+      console.log(array);
+      for (var i = 0; i < array.length; i++) {
+        mySet.add(array[i]);
+      }
+      console.log("Filtered array using Set is: ");
+      console.log(mySet);
+    </script>
+  </body>
+</html>
